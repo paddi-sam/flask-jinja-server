@@ -99,3 +99,30 @@
 .register-button:hover{
   scale: 1.02
 }
+
+.get-started-button-container {
+  width: 250px;
+  height: 100px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;  /* centers horizontally */
+  border-radius: 25px;
+  cursor: pointer;
+  border-color: rgb(0, 0, 0);
+  border-style: solid;
+  background-color: transparent;
+  transition: background-color 0.5s, transform ease-in-out;  /* fixed */
+  border-width: 3px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.get-started-button-container:hover {
+  background-color: plum;
+}
+
+.get-started-button-container:active {
+  transform: scale(0.9);
+}

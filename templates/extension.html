@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Page{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    {% block header %}
+        <h1>Welcome to my page</h1>
+        <p>Subtitle here</p>
+    {% endblock %}
+    
+    {% block content %}
+        <div class="get-started-button-container" onclick="location.href='/next-page/'">
+            Get Started
+        </div>
+
+        <p>This is the main content</p>
+    {% endblock %}
+
+    {% block settings %}
+        <img src="{{ url_for('static', filename='images/settings.png') }}" alt="Logo" width="200">
+    {% endblock %}
+
+    {% block sidebar %}
+        <ul>
+            <li>Link 1</li>
+            <li>Link 2</li>
+        </ul>
+    {% endblock %}
+
+</body>
+</html>

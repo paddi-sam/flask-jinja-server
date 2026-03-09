@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, flash, redirect, url_for, session
+from flask import Flask, render_template, request, flash, redirect, url_for, session #©Sam
 import sqlite3
 
 app = Flask(__name__)
@@ -7,6 +7,14 @@ app.secret_key = 'your-secret-key-here'
 @app.route('/')
 def index():
     return render_template('index.html')
+
+@app.route('/base')
+def base():
+    return render_template('base.html')
+
+@app.route('/extension')
+def extension():
+    return render_template('extension.html')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
